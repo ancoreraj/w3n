@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 const Discover = () => {
     return (
         <View>
-            <Text>THis is discover tab</Text>
+            <Text>This is discover tab</Text>
         </View>
     )
 }
