@@ -5,7 +5,7 @@ import SingleNews from './components/SingleNews'
 
 const News = () => {
     return (
-        <Swiper style={styles.wrapper} horizontal={false} loop={false}>
+        <Swiper style={styles.wrapper} horizontal={false} loop={true}>
             <SingleNews />
         </Swiper>
     )

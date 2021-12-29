@@ -26,7 +26,7 @@ const Index = () => {
                     options={{
                         title: ({ color, focused }) => (
                             <View style={styles.tabContainer}>
-                                <Feather name="home" size={27} color={focused ? '#d3eac7' : '#6f776e'} />
+                                <Feather name="home" size={24} color={focused ? '#d3eac7' : '#6f776e'} />
                             </View>
                         ),
                     }}
@@ -35,7 +35,7 @@ const Index = () => {
                     options={{
                         title: ({ color, focused }) => (
                             <View style={styles.tabContainer}>
-                                <FontAwesome name="newspaper-o" size={26} color={focused ? '#d3eac7' : '#6f776e'} />
+                                <FontAwesome name="newspaper-o" size={23} color={focused ? '#d3eac7' : '#6f776e'} />
                             </View>
                         ),
                     }} name="Discover" component={News} />
