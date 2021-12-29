@@ -14,11 +14,11 @@ const Index = () => {
             <Tab.Navigator
                 tabBarOptions={{
                     style: {
-                        backgroundColor: "#fff",
+                        backgroundColor: "#171e1f",
                         paddingTop: StatusBar.currentHeight,
                     },
                     indicatorStyle: {
-                        backgroundColor: "#262250"
+                        backgroundColor: "#d3eac7"
                     }
                 }}
             >
@@ -26,7 +26,7 @@ const Index = () => {
                     options={{
                         title: ({ color, focused }) => (
                             <View style={styles.tabContainer}>
-                                <Feather name="home" size={27} color={focused ? '#312F62' : '#B1AFCD'} />
+                                <Feather name="home" size={27} color={focused ? '#d3eac7' : '#6f776e'} />
                             </View>
                         ),
                     }}
@@ -35,7 +35,7 @@ const Index = () => {
                     options={{
                         title: ({ color, focused }) => (
                             <View style={styles.tabContainer}>
-                                <FontAwesome name="newspaper-o" size={26} color={focused ? '#312F62' : '#B1AFCD'} />
+                                <FontAwesome name="newspaper-o" size={26} color={focused ? '#d3eac7' : '#6f776e'} />
                             </View>
                         ),
                     }} name="Discover" component={News} />
