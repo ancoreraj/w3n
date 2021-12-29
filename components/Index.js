@@ -2,8 +2,8 @@ import React from 'react'
 import { View, Text, StyleSheet, StatusBar } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { Feather, FontAwesome } from '@expo/vector-icons';
-import News from '../screens/News/News';
 import Discover from '../screens/Discover/Discover';
+import NewsIndex from '../screens/News/NewsIndex';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -38,7 +38,7 @@ const Index = () => {
                                 <FontAwesome name="newspaper-o" size={23} color={focused ? '#d3eac7' : '#6f776e'} />
                             </View>
                         ),
-                    }} name="Discover" component={News} />
+                    }} name="Discover" component={NewsIndex} />
             </Tab.Navigator>
         </>
     )

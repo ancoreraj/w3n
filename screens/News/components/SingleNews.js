@@ -5,7 +5,8 @@ import { styleProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const SingleNews = () => {
+const SingleNews = ({navigation}) => {
+
     return (
         <View
             style={styles.singleNews}
@@ -15,9 +16,6 @@ const SingleNews = () => {
                 source={{ uri: 'https://cdn.vox-cdn.com/thumbor/rmLBWDzawqeTLS-e8X13lgVNBd4=/0x551:7695x4580/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23042763/Nothing__1__black_edition_closed_case.jpg' }}
                 style={{ height: "33%", resizeMode: "cover", width: windowWidth, marginRight: 25 }}
             />
-
-
-
             <View
                 style={{
                     ...styles.description,
@@ -25,8 +23,6 @@ const SingleNews = () => {
 
             >
                 <View>
-
-
                     <Text style={styles.title}>Bitcoin falls 8.4% to $49228.82 - Reuters</Text>
                     <Text style={styles.content}>Dec 4 (Reuters) - Bitcoin dropped 8.4% to $49,228.82 at 20:01 GMT on Saturday, losing $4,514.87 from its previous close. Bitcoin, the world's biggest and best-known cryptocurrency, is down 28.7% fr from its previous close. Bitcoin, the world's biggest and best-known cryptocurrency, is down 28.7% fro from its previous close. Bitcoin, the world's biggest and best-known cryptocurrency, is down 28.7% fro
                         from its previous close. Bitcoin, the world's biggest and best-known cryptocurrency, is down 28.7% fro</Text>
@@ -39,16 +35,16 @@ const SingleNews = () => {
                     </Text>
                 </View>
                 <View style={styles.bottomButton}>
-                    <TouchableOpacity style={styles.button} onPress={() => Alert.alert('Ankur is the best')}>
+                    <TouchableOpacity style={styles.button}
+                        onPress={() => navigation.navigate('Browser', {
+                            uri: 'https://ancorenita.com',
+                        })}>
                         <Text style={styles.bottonText}>
                             Read More
                         </Text>
                     </TouchableOpacity>
                 </View>
-
             </View>
-
-
         </View>
     )
 }

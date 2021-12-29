@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import Swiper from 'react-native-swiper'
-import SingleNews from './components/SingleNews'
+import SingleNews from './SingleNews'
 
-const News = () => {
+const News = ({navigation}) => {
     return (
         <Swiper style={styles.wrapper} horizontal={false} loop={true}>
-            <SingleNews />
+            <SingleNews navigation={navigation} />
         </Swiper>
     )
 }
