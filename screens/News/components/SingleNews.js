@@ -1,6 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity, Linking, Alert } from 'react-native'
-import { styleProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
+import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity } from 'react-native'
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -20,7 +19,6 @@ const SingleNews = ({navigation}) => {
                 style={{
                     ...styles.description,
                 }}
-
             >
                 <View>
                     <Text style={styles.title}>Bitcoin falls 8.4% to $49228.82 - Reuters</Text>
@@ -37,7 +35,7 @@ const SingleNews = ({navigation}) => {
                 <View style={styles.bottomButton}>
                     <TouchableOpacity style={styles.button}
                         onPress={() => navigation.navigate('Browser', {
-                            uri: 'https://ancorenita.com',
+                            uri: 'https://instagram.com',
                         })}>
                         <Text style={styles.bottonText}>
                             Read More
