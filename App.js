@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, StatusBar } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Index from "./components/Index"
 import { NavigationContainer } from '@react-navigation/native';
 import AppLoading from 'expo-app-loading';
@@ -24,9 +24,6 @@ export default function App() {
       </NavigationContainer>
     );
   }
-
-
-
 }
 
 const styles = StyleSheet.create({

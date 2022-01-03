@@ -7,10 +7,12 @@ const News = ({navigation}) => {
     return (
         <Swiper style={styles.wrapper} horizontal={false} loop={true}>
             <SingleNews navigation={navigation} />
+            <SingleNews navigation={navigation} />
+            <SingleNews navigation={navigation} />
+            <SingleNews navigation={navigation} />
         </Swiper>
     )
 }
-
 
 const styles = StyleSheet.create({
 

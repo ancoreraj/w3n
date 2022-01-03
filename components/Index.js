@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, StatusBar } from 'react-native'
+import { View, StyleSheet, StatusBar } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { Feather, FontAwesome } from '@expo/vector-icons';
 import Discover from '../screens/Discover/Discover';
