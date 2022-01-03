@@ -19,7 +19,7 @@ const Index = () => {
                     },
                     indicatorStyle: {
                         backgroundColor: "#d3eac7"
-                    }
+                    },
                 }}
             >
                 <Tab.Screen

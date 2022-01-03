@@ -4,17 +4,23 @@ import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity } from 'rea
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const SingleNews = ({navigation}) => {
+const SingleNews = ({ navigation }) => {
 
     return (
         <View
             style={styles.singleNews}
         >
-
             <Image
                 source={{ uri: 'https://cdn.vox-cdn.com/thumbor/rmLBWDzawqeTLS-e8X13lgVNBd4=/0x551:7695x4580/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23042763/Nothing__1__black_edition_closed_case.jpg' }}
-                style={{ height: "33%", resizeMode: "cover", width: windowWidth, marginRight: 25 }}
+                style={{ height: "35%", resizeMode: "cover", width: windowWidth, marginRight: 25 }}
             />
+
+            <View style={styles.logo}>
+                <Text style={{ color: '#d3eac7', fontFamily: 'Manrope-Bold', fontSize: 16,  }}>
+                    W3N
+                </Text>
+            </View>
+
             <View
                 style={{
                     ...styles.description,
@@ -50,6 +56,16 @@ const SingleNews = ({navigation}) => {
 export default SingleNews
 
 const styles = StyleSheet.create({
+    logo:{
+        backgroundColor: '#171e1f', 
+        width:55,
+        marginLeft: 15, 
+        marginTop: -22, 
+        alignItems: 'center',
+        borderRadius: 3,
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
+    },
     singleNews: {
         backgroundColor: '#2a2b32',
         flex: 1
@@ -59,8 +75,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#171e1f',
         flexDirection: 'column',
-        justifyContent: 'space-between'
-
+        justifyContent: 'space-between',
     },
     title: {
         fontSize: 23,
