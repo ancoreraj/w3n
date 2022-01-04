@@ -1,11 +1,12 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity, Alert } from 'react-native'
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const SingleNews = ({ navigation }) => {
+const DiscoverFull = (props) => {
 
+    // console.log(props.route.params.uri)
     return (
         <View
             style={styles.singleNews}
@@ -40,11 +41,9 @@ const SingleNews = ({ navigation }) => {
                 </View>
                 <View style={styles.bottomButton}>
                     <TouchableOpacity style={styles.button}
-                        onPress={() => navigation.navigate('Browser', {
-                            uri: 'https://google.com',
-                        })}>
+                        onPress={() => Alert.alert('Ankur Raj')}>
                         <Text style={styles.bottonText}>
-                            Read More
+                            Back
                         </Text>
                     </TouchableOpacity>
                 </View>
@@ -53,7 +52,7 @@ const SingleNews = ({ navigation }) => {
     )
 }
 
-export default SingleNews
+export default DiscoverFull
 
 const styles = StyleSheet.create({
     logo:{

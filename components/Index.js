@@ -2,7 +2,7 @@ import React from 'react'
 import { View, StyleSheet, StatusBar } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { Feather, FontAwesome } from '@expo/vector-icons';
-import Discover from '../screens/Discover/Discover';
+import DiscoverIndex from '../screens/Discover/DiscoverIndex';
 import NewsIndex from '../screens/News/NewsIndex';
 
 const Tab = createMaterialTopTabNavigator();
@@ -21,6 +21,7 @@ const Index = () => {
                         backgroundColor: "#d3eac7"
                     },
                 }}
+                
             >
                 <Tab.Screen
                     options={{
@@ -30,7 +31,7 @@ const Index = () => {
                             </View>
                         ),
                     }}
-                    name="News" component={Discover} />
+                    name="News" component={DiscoverIndex} />
                 <Tab.Screen
                     options={{
                         title: ({ color, focused }) => (
