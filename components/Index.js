@@ -31,7 +31,7 @@ const Index = () => {
                             </View>
                         ),
                     }}
-                    name="News" component={DiscoverIndex} />
+                    name="News" component={NewsIndex} />
                 <Tab.Screen
                     options={{
                         title: ({ color, focused }) => (
@@ -39,7 +39,7 @@ const Index = () => {
                                 <FontAwesome name="newspaper-o" size={20} color={focused ? '#d3eac7' : '#6f776e'} />
                             </View>
                         ),
-                    }} name="Discover" component={NewsIndex} />
+                    }} name="Discover" component={DiscoverIndex} />
             </Tab.Navigator>
         </>
     )
