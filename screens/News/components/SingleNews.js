@@ -41,7 +41,7 @@ const SingleNews = ({ navigation }) => {
                 <View style={styles.bottomButton}>
                     <TouchableOpacity style={styles.button}
                         onPress={() => navigation.navigate('Browser', {
-                            uri: 'https://google.com',
+                            uri: 'https://instagram.com',
                         })}>
                         <Text style={styles.bottonText}>
                             Read More

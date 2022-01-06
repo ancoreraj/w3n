@@ -15,7 +15,7 @@ const Index = () => {
                 tabBarOptions={{
                     style: {
                         backgroundColor: "#171e1f",
-                        paddingTop: StatusBar.currentHeight,
+                        marginTop: StatusBar.currentHeight,
                     },
                     indicatorStyle: {
                         backgroundColor: "#d3eac7"
@@ -31,7 +31,7 @@ const Index = () => {
                             </View>
                         ),
                     }}
-                    name="News" component={NewsIndex} />
+                    name="NewsIndex" component={NewsIndex} />
                 <Tab.Screen
                     options={{
                         title: ({ color, focused }) => (
@@ -39,7 +39,7 @@ const Index = () => {
                                 <FontAwesome name="newspaper-o" size={20} color={focused ? '#d3eac7' : '#6f776e'} />
                             </View>
                         ),
-                    }} name="Discover" component={DiscoverIndex} />
+                    }} name="DiscoverIndex" component={DiscoverIndex} />
             </Tab.Navigator>
         </>
     )

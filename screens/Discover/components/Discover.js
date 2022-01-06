@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         backgroundColor: '#171e1f',
-        padding: 15,
+        paddingHorizontal: 15,
     },
 
 });
