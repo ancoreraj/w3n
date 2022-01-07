@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 
 const NewsIndex = () => {
     return (
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Navigator screenOptions={{ headerShown: true }}>
             <Stack.Screen component={News} name='News' />
             <Stack.Screen component={Browser} name='Browser' />
         </Stack.Navigator>

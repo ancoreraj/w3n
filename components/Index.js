@@ -1,50 +1,52 @@
 import React from 'react'
-import { View, StyleSheet, StatusBar } from 'react-native'
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { View, StyleSheet } from 'react-native'
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Feather, FontAwesome } from '@expo/vector-icons';
 import DiscoverIndex from '../screens/Discover/DiscoverIndex';
 import NewsIndex from '../screens/News/NewsIndex';
 
-const Tab = createMaterialTopTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 const Index = () => {
     return (
         <>
             <Tab.Navigator
-                tabBarOptions={{
-                    style: {
-                        backgroundColor: "#171e1f",
-                        marginTop: StatusBar.currentHeight,
-                    },
-                    indicatorStyle: {
-                        backgroundColor: "#d3eac7"
-                    },
+                barStyle={{
+                    // backgroundColor: "#171e1f",
+                    backgroundColor: "#d3eac7",
+                    borderRadius: 5,
+                    height: 45
+
                 }}
-                
             >
                 <Tab.Screen
+                    name="News"
+                    component={NewsIndex}
                     options={{
-                        title: ({ color, focused }) => (
-                            <View style={styles.tabContainer}>
-                                <Feather name="home" size={20} color={focused ? '#d3eac7' : '#6f776e'} />
+                        tabBarLabel: null,
+                        tabBarIcon: ({ color, focused }) => (
+                            <View style={{ width: 30, height: 30, justifyContent: 'center' }}>
+                                <Feather name="home" size={focused ? 26 : 20} color='#171e1f' />
+                            </View>
+                        ),
+                    }} />
+
+                <Tab.Screen
+                    name="Discover"
+                    component={DiscoverIndex}
+                    options={{
+                        tabBarLabel: null,
+                        tabBarIcon: ({ color, focused }) => (
+                            <View style={{ width: 30, height: 30, justifyContent: 'center' }}>
+                                <FontAwesome name="newspaper-o" size={focused ? 26 : 20} color='#171e1f' />
                             </View>
                         ),
                     }}
-                    name="NewsIndex" component={NewsIndex} />
-                <Tab.Screen
-                    options={{
-                        title: ({ color, focused }) => (
-                            <View style={styles.tabContainer}>
-                                <FontAwesome name="newspaper-o" size={20} color={focused ? '#d3eac7' : '#6f776e'} />
-                            </View>
-                        ),
-                    }} name="DiscoverIndex" component={DiscoverIndex} />
+
+                />
             </Tab.Navigator>
         </>
     )
 }
 
-const styles = StyleSheet.create({
-
-});
 export default Index
