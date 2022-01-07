@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, FlatList } from 'react-native'
+import { View, StyleSheet, FlatList, StatusBar } from 'react-native'
 import Block from './Block'
 
 const Discover = ({navigation}) => {
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#171e1f',
         paddingHorizontal: 15,
+        marginTop: StatusBar.currentHeight,
     },
 
 });

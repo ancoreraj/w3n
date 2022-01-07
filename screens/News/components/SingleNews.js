@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity, StatusBar } from 'react-native'
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -12,7 +12,7 @@ const SingleNews = ({ navigation }) => {
         >
             <Image
                 source={{ uri: 'https://cdn.vox-cdn.com/thumbor/rmLBWDzawqeTLS-e8X13lgVNBd4=/0x551:7695x4580/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23042763/Nothing__1__black_edition_closed_case.jpg' }}
-                style={{ height: "35%", resizeMode: "cover", width: windowWidth, marginRight: 25 }}
+                style={{ height: "40%", resizeMode: "cover", width: windowWidth, marginRight: 25 }}
             />
 
             <View style={styles.logo}>
@@ -41,7 +41,7 @@ const SingleNews = ({ navigation }) => {
                 <View style={styles.bottomButton}>
                     <TouchableOpacity style={styles.button}
                         onPress={() => navigation.push('Browser', {
-                            uri: 'https://instagram.com',
+                            uri: 'https://m.cricbuzz.com/',
                         })}>
                         <Text style={styles.bottonText}>
                             Read More
@@ -69,6 +69,8 @@ const styles = StyleSheet.create({
     },
     singleNews: {
         backgroundColor: '#2a2b32',
+        // height: windowHeight,
+        marginTop: StatusBar.currentHeight,
         flex: 1
     },
     description: {

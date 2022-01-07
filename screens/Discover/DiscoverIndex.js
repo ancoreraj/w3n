@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 
 const DiscoverIndex = () => {
     return (
-        <Stack.Navigator screenOptions={{ headerShown: true }}>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen component={Discover} name='Discover' />
             <Stack.Screen component={DiscoverFull} name='DiscoverFull' />
         </Stack.Navigator>

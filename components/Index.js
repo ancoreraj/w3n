@@ -20,7 +20,7 @@ const Index = () => {
                 }}
             >
                 <Tab.Screen
-                    name="News"
+                    name="NewsIndex"
                     component={NewsIndex}
                     options={{
                         tabBarLabel: null,
@@ -32,7 +32,7 @@ const Index = () => {
                     }} />
 
                 <Tab.Screen
-                    name="Discover"
+                    name="DiscoverIndex"
                     component={DiscoverIndex}
                     options={{
                         tabBarLabel: null,
