@@ -40,7 +40,7 @@ const SingleNews = ({ navigation }) => {
                 </View>
                 <View style={styles.bottomButton}>
                     <TouchableOpacity style={styles.button}
-                        onPress={() => navigation.navigate('Browser', {
+                        onPress={() => navigation.push('Browser', {
                             uri: 'https://instagram.com',
                         })}>
                         <Text style={styles.bottonText}>

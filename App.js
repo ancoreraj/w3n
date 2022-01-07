@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
 import Index from "./components/Index"
 import { NavigationContainer } from '@react-navigation/native';
 import AppLoading from 'expo-app-loading';
@@ -18,16 +17,8 @@ export default function App() {
   } else {
     return (
       <NavigationContainer>
-        <View style={styles.container}>
-          <Index />
-        </View>
+        <Index />
       </NavigationContainer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});

@@ -8,7 +8,6 @@ import NewsIndex from '../screens/News/NewsIndex';
 const Tab = createMaterialTopTabNavigator();
 
 const Index = () => {
-
     return (
         <>
             <Tab.Navigator

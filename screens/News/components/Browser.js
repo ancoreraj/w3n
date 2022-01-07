@@ -13,7 +13,8 @@ const Browser = (props) => {
                 !isLoaded ? <ProgressBar progress={progress} color={Colors.blue800} /> : null
             }
             <WebView
-                source={{ uri : props.route.params.uri }}
+                style={{ backgroundColor: '#171e1f' }}
+                source={{ uri: props.route.params.uri }}
                 onError={(event) => Alert.alert(`WebView Error`)}
                 onLoadProgress={({ nativeEvent }) => setProgress(nativeEvent.progress)}
                 onLoadEnd={() => setLoaded(true)}
