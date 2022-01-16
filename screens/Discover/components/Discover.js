@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, FlatList, StatusBar } from 'react-native'
+import { View, Text, StyleSheet, FlatList, StatusBar } from 'react-native'
 import Block from './Block'
 
 const Discover = ({navigation}) => {

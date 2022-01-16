@@ -6,8 +6,8 @@ const windowWidth = Dimensions.get("window").width;
 const Block = ({ title, description, navigation }) => {
     return (
         <TouchableOpacity 
-            onPress={() => navigation.navigate('DiscoverFull', {
-                uri: 'https://instagram.com',
+            onPress={() => navigation.navigate('Browser', {
+                uri: 'https://w3n-content.vercel.app/content',
             })}>
             <View style={styles.block}>
                 <View>
