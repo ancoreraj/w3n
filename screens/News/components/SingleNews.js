@@ -41,7 +41,7 @@ const SingleNews = ({ navigation }) => {
                 <View style={styles.bottomButton}>
                     <TouchableOpacity style={styles.button}
                         onPress={() => navigation.push('Browser', {
-                            uri: 'https://m.cricbuzz.com/',
+                            uri: 'https://w3n-content.vercel.app/content',
                         })}>
                         <Text style={styles.bottonText}>
                             Read More
@@ -69,7 +69,6 @@ const styles = StyleSheet.create({
     },
     singleNews: {
         backgroundColor: '#2a2b32',
-        // height: windowHeight,
         marginTop: StatusBar.currentHeight,
         flex: 1
     },

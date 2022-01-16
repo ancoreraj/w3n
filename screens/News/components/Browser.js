@@ -8,27 +8,17 @@ const Browser = ({ navigation, route }) => {
     const [isLoaded, setLoaded] = useState(false)
     const webview = useRef(null);
 
-    
-
     const onAndroidBackPress = () => {  
-        let a = webview.current.startUrl.length
-        let b = route.params.uri.length
+        let lengthOfCurrentURL = webview.current.startUrl.length
+        let lengthOfOriginalURL = route.params.uri.length
 
-        if(Math.abs(a - b) <= 2){
-            console.log(`check`);
+        if(Math.abs(lengthOfCurrentURL - lengthOfOriginalURL) <= 2){
             navigation.pop()
             return true;
         }else{
             webview.current.goBack();
             return true;
         }
-        // if (webview.current) {
-        //     console.log('=====================================')
-        //     console.log(webview.current.startUrl);
-        //     console.log(route.params.uri);
-        //     console.log('=====================================')
-        //     return true// prevent default behavior (exit app)
-        // }
     };
 
     useEffect(() => {
@@ -56,13 +46,9 @@ const Browser = ({ navigation, route }) => {
                 onError={(event) => Alert.alert(`WebView Error`)}
                 onLoadProgress={({ nativeEvent }) => setProgress(nativeEvent.progress)}
                 onLoadEnd={() => setLoaded(true)}
-                // onNavigationStateChange={(navState) => {
-                    
-                // }}
             />
         </>
     )
 }
-
 
 export default Browser
