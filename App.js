@@ -9,6 +9,7 @@ export default function App() {
     'Manrope-SemiBold': require('./assets/fonts/Manrope-SemiBold.ttf'),
     'Manrope-Bold': require('./assets/fonts/Manrope-Bold.ttf'),
     'Roboto-Regular': require('./assets/fonts/RobotoMono-Regular.ttf'),
+    'Roboto-Light': require('./assets/fonts/RobotoMono-Light.ttf'),
     'Roboto-Thin': require('./assets/fonts/RobotoMono-Thin.ttf'),
   });
 
